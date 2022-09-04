@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import './index.css'
 import { css } from "styled-components/macro"; //eslint-disable-line
 import HeaderBase, { NavLinks, NavLink, PrimaryLink } from "components/headers/light.js";
 import { SectionHeading } from "components/misc/Headings.js";
@@ -11,12 +12,20 @@ import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-c
 import { ReactComponent as QuotesLeftIconBase } from "images/quotes-l.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
 
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+
+import image1 from '../../images/slideshow-image1'
+import image2 from '../../images/slideshow-image2'
+import image3 from '../../images/slideshow-image3'
+import image4 from '../../images/slideshow-image4'
+
 const Header = tw(HeaderBase)`max-w-none`;
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`;
 const Column = tw.div``;
 const TextColumn = tw(Column)`mr-auto lg:mr-0 max-w-lg lg:max-w-xl xl:max-w-2xl`;
-const Heading = tw(SectionHeading)`text-left text-primary-900 leading-snug xl:text-6xl`;
-const Description = tw(SectionDescription)`mt-4 lg:text-base text-gray-700 max-w-lg`;
+const Heading = tw(SectionHeading)`text-left text-primary-900 leading-tight xl:text-6xl pr-20 text-green-800`;
+const Description = tw(SectionDescription)`mt-4 lg:text-base text-gray-700 max-w-lg pr-10 pb-20`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 inline-block w-56 tracking-wide text-center py-5`;
 const FeatureList = tw.ul`mt-12 leading-loose`;
 const Feature = tw.li`flex items-center`;
@@ -37,7 +46,7 @@ const CustomerCompany = tw.p`mt-1 text-sm text-gray-500`
 
 
 export default ({
-  heading = "Earl of March Student Council",
+  heading = "EOM Studco Website",
   description = "EOM's Student Council website: Find information about events, activities, and more.",
   imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
   imageDecoratorBlob = true,
@@ -49,16 +58,17 @@ export default ({
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     customerName: "Charlotte Hale",
     customerCompany: "Delos Inc."
+
   }
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`;
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
+      <NavLink href="/announcements" to="/announcements">Announcements</NavLink>
+      <NavLink href="/#">Important Dates</NavLink>
+      <NavLink href="/#">Discussion</NavLink>
       <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#">Testimonials</NavLink>
+      {/* <NavLink href="/#">Testimonials</NavLink> */}
     </NavLinks>,
     <NavLinks key={2}>
       <NavLink href="/#" tw="lg:ml-12!">
@@ -71,6 +81,13 @@ export default ({
   ];
   return (
     <>
+      {/* <AliceCarousel autoPlay autoPlayInterval="3000">
+        <img src={image1} className="sliderimg"/>
+        <img src={image2} className="sliderimg"/>
+        <img src={image3} className="sliderimg"/>
+        <img src={image4} className="sliderimg"/>
+      </AliceCarousel> */}
+  
       <Header links={navLinks} />
       <Container>
         <ContentWithVerticalPadding>
@@ -78,7 +95,7 @@ export default ({
             <TextColumn>
               <Heading>{heading}</Heading>
               <Description>{description}</Description>
-              <PrimaryButton as="a" href={primaryButtonUrl} css={buttonRoundedCss}>
+              {/* <PrimaryButton as="a" href={primaryButtonUrl} css={buttonRoundedCss}>
                 {primaryButtonText}
               </PrimaryButton>
               <FeatureList>
@@ -88,11 +105,25 @@ export default ({
                     <FeatureText>{feature}</FeatureText>
                   </Feature>
                 ))}
-              </FeatureList>
-            </TextColumn>
-            <ImageColumn>
+              </FeatureList> */}
+            </TextColumn>   
+              {/* Image Carousel placement --- https://www.npmjs.com/package/react-alice-carousel to view all components and documentation */}
+              <AliceCarousel autoWidth infinite keyboardNavigation paddingLeft={350} autoPlay autoPlayInterval="3000">
+                    <img src={image1} className="sliderimg"/>
+                    <img src={image2} className="sliderimg"/>
+                    <img src={image3} className="sliderimg"/>
+                    <img src={image4} className="sliderimg"/>
+              </AliceCarousel>
+            
+            {/* <ImageColumn>
               <ImageContainer>
                 <Image src={imageSrc} />
+                <AliceCarousel autoPlay autoPlayInterval="3000">
+                  <img src={image1} className="sliderimg"/>
+                  <img src={image2} className="sliderimg"/>
+                  <img src={image3} className="sliderimg"/>
+                  <img src={image4} className="sliderimg"/>
+                </AliceCarousel>
                 {imageDecoratorBlob && <ImageDecoratorBlob />}
                 <Testimonial>
                   <QuotesLeftIcon/>
@@ -102,7 +133,8 @@ export default ({
                 </Testimonial>
               </ImageContainer>
               <Offsetbackground />
-            </ImageColumn>
+            </ImageColumn> */}
+
           </Row>
         </ContentWithVerticalPadding>
       </Container>

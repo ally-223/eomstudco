@@ -4,42 +4,54 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { Container as ContainerBase, ContentWithPaddingXl } from "components/misc/Layouts";
 import { SectionDescription } from "components/misc/Typography";
+import Button from "components/misc/Buttons";
 
-const Container = tw(ContainerBase)`my-8 lg:my-10 bg-primary-900 text-gray-100 -mx-8 px-8`;
+const Container = tw(ContainerBase)`my-8 lg:my-10 bg-green-900 text-gray-100 -mx-8 px-8`;
 const HeadingContainer = tw.div``;
-const Heading = tw(SectionHeading)`sm:text-3xl md:text-4xl lg:text-5xl`;
+const Heading = tw(SectionHeading)`sm:text-3xl md:text-4xl lg:text-5xl text-white mb-0`;
 const Subheading = tw(SubheadingBase)`text-gray-100 text-center`;
 const Description = tw(SectionDescription)`text-gray-400 text-center mx-auto max-w-screen-md`;
 
 const StatsContainer = tw.div`mt-8 flex flex-col sm:flex-row items-center justify-center flex-wrap max-w-screen-md justify-between mx-auto`
 const Stat = tw.div`flex flex-col text-center p-4 tracking-wide`
-const StatKey = tw.div`text-xl font-medium`
-const StatValue = tw.div`text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-black`
+const StatKey = tw.div`text-base font-medium`
+const StatValue = tw.div`text-base sm:text-base md:text-base lg:text-base font-black`
 
 export default ({
-  subheading = "",
-  heading = "Over 9000 Projects Completed",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  subheading = "See more:",
+  heading = "Announcements",
+  description = "Overview of the important dates coming up:",
   stats = [
     {
-      key: "Clients",
-      value: "2500+",
+      key: "Tuesday, September 9th",
+      value: "First day of school",
     },
     {
-      key: "Revenue",
-      value: "$100M+",
+      key: "Thursday, September 11th",
+      value: "Spirit Day",
     },
     {
-      key: "Employees",
-      value: "150+",
+      key: "October 19th",
+      value: "Midterm Report Cards",
     },
   ]
 }) => {
   return (
     <Container>
+
       <ContentWithPaddingXl>
         <HeadingContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
+          <Heading>{heading}</Heading>
+          {/* {description && <Description>{description}</Description>} */}
+        </HeadingContainer>
+      </ContentWithPaddingXl>
+      <StatsContainer>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS7s4ege6PRmmeDZS6IQY7MJLcA-dguq0WcpOlHTb-sqZQTb4MN7rocyt6hD3CF7uA5wrVhwLHAOsDb/pub?embedded=true" height= "800px" width= "900px" ></iframe>
+      </div>
+      </StatsContainer>
+      {/* <ContentWithPaddingXl>
+        <HeadingContainer>
           <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
         </HeadingContainer>
@@ -51,7 +63,10 @@ export default ({
             </Stat>
           ))}
         </StatsContainer>
-      </ContentWithPaddingXl>
+        <HeadingContainer>
+          {subheading && <Subheading>{subheading}</Subheading>}
+        </HeadingContainer>
+      </ContentWithPaddingXl> */}
     </Container>
   );
 };

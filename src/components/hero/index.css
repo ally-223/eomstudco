@@ -1,0 +1,7 @@
+.sliderimg{
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+    border-width: 2px;
+    border-color: rgb(22 101 52);
+}

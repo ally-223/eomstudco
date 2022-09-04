@@ -22,10 +22,11 @@ export default () => {
     <AnimationRevealPage>
       <Hero />
       <FeatureStats/>
-      <Features 
+      <Features
         heading={<>Amazing <HighlightedText>Features</HighlightedText></>}
       />
-      <MainFeature
+      
+      {/* <MainFeature
         heading={<>Cloud built by and for <HighlightedText>Professionals</HighlightedText></>}
       />
       <Testimonial 
@@ -41,7 +42,7 @@ export default () => {
         subheading="Blog"
         heading={<>We love <HighlightedText>Writing</HighlightedText></>}
       />
-      <GetStarted/>
+      <GetStarted/> */}
       <Footer />
     </AnimationRevealPage>
   );

@@ -9751,6 +9751,13 @@
   dependencies:
     "fast-memoize" "^2.5.1"
 
+"react-alice-carousel@^2.6.4":
+  "integrity" "sha512-G2RTX8SVuqkif3n3qEF9yd1NOqdM8S8SmB7yZ1hiUMMgmgyA+h7HJGTnIbblmU7h7AtaZQ4V6qhJJKxJC0lacQ=="
+  "resolved" "https://registry.npmjs.org/react-alice-carousel/-/react-alice-carousel-2.6.4.tgz"
+  "version" "2.6.4"
+  dependencies:
+    "vanilla-swipe" "^2.2.0"
+
 "react-anchor-link-smooth-scroll@^1.0.12":
   "integrity" "sha512-aaY+9X0yh8YnC0jBfoTKpsiCLdO/Y6pCltww+VB+NnTBPDOvnIdnp1AlazajsDitc1j+cVSQ+yNtaVeTIMQbxw=="
   "resolved" "https://registry.npmjs.org/react-anchor-link-smooth-scroll/-/react-anchor-link-smooth-scroll-1.0.12.tgz"
@@ -9987,7 +9994,7 @@
     "lodash.debounce" "^4.0.8"
     "resize-observer-polyfill" "^1.5.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.13.1 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=15", "react@>=16.8 || ^17.0.0", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0", "react@^16.13.1 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>= 16.8.0", "react@>=15", "react@>=15.4", "react@>=16.8 || ^17.0.0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -12195,6 +12202,11 @@
   "integrity" "sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw=="
   "resolved" "https://registry.npmjs.org/value-equal/-/value-equal-1.0.1.tgz"
   "version" "1.0.1"
+
+"vanilla-swipe@^2.2.0":
+  "integrity" "sha512-EdZdBWhPQvKz8DWHRXEHxsbJnU5wWKXrXblOV9ENElDnEK3tPkrBlAYK1pgPeuUb8k2DPQEK3tFi6W4cMZgUAg=="
+  "resolved" "https://registry.npmjs.org/vanilla-swipe/-/vanilla-swipe-2.4.0.tgz"
+  "version" "2.4.0"
 
 "vary@~1.1.2":
   "integrity" "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw= sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="
